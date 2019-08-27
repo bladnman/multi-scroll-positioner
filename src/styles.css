@@ -1,0 +1,10 @@
+:root {
+  --border-width : 4px;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

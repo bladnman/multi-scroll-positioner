@@ -1,0 +1,16 @@
+.root {
+  position: relative;
+  padding: calc(var(--border-width) + 5px);
+}
+/* .root:before {
+  position: absolute;
+  content: "";
+  top: var(--border-width);
+  left: var(--border-width);
+  bottom: var(--border-width);
+  right: var(--border-width);
+  border: var(--border-width) solid blue;
+} */
+.label {
+  padding: 0.2em;
+}

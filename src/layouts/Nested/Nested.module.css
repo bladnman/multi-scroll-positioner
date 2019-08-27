@@ -1,0 +1,36 @@
+.root {
+  width: 100vw;
+}
+.scroller {
+  /* margin: 10em; */
+  padding-left: 5em;
+  padding-right: 5em;
+  height: 40vh;
+  /* height: 130vh;
+  width: 50%;
+  margin: auto; */
+}
+.frame {
+  position: relative;
+  /* display: flex;
+  justify-content: center;
+  align-content: center; */
+  max-height: 60vh;
+  width: 80%;
+  /* overflow: auto; */
+}
+.panel {
+  margin: 50% 10%;
+}
+
+.toolbar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 10000;
+  top: 0;
+  padding: 0.5em;
+  background: rgba(155, 155, 155, 0.39);
+  left: 0;
+  bottom: 0;
+}
