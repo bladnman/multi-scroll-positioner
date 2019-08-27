@@ -1,24 +1,24 @@
-import React from "react";
-import cx from "classnames";
-import styles from "./DynaSingle.module.css";
-import ScrollDiv from "../../ScrollDiv/ScrollDiv";
-import FMDiv from "../../FMDiv/FMDiv";
-import positionFM from "../../tools/positionFM";
-import FocusManager from "../../FocusManager";
+import React from 'react';
+import cx from 'classnames';
+import styles from './DynaSingle.module.css';
+import ScrollDiv from '../../ScrollDiv/ScrollDiv';
+import FMDiv from '../../FMDiv/FMDiv';
+import positionFM from '../../tools/positionFM';
+import FocusManager from '../../FocusManager';
 class DynaSingle extends React.Component {
   static defaultProps = {
     count: 11,
     focusedIndex: undefined,
     percentPerItem: 10,
     startPercentInt: 0,
-    durationMs: 500,
-    stepDurationPercFloatAdjustmentMs: 0.0
+    durationMs: 2500,
+    stepDurationPercFloatAdjustmentMs: 2.0,
   };
   focusManager = undefined;
   _items = [];
   constructor(props) {
     super(props);
-    this.focusManager = new FocusManager(this, "dynSingle");
+    this.focusManager = new FocusManager(this, 'dynSingle');
   }
   componentDidUpdate(prevProps) {
     if (prevProps.focusedIndex !== this.props.focusedIndex) {
@@ -58,8 +58,8 @@ class DynaSingle extends React.Component {
         classes: [
           styles.item,
           sizeClass,
-          idx % 2 === 0 ? styles.bgLight : styles.bgDark
-        ]
+          idx % 2 === 0 ? styles.bgLight : styles.bgDark,
+        ],
       });
     }
 
