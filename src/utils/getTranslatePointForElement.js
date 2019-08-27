@@ -9,8 +9,10 @@ export default function getTranslatePointForElement(elem) {
   let mat = transform.match(/^matrix3d\((.+)\)$/);
   if (mat) return parseFloat(mat[1].split(', ')[13]);
   mat = transform.match(/^matrix\((.+)\)$/);
-  mat ? transArr.push(parseFloat(mat[1].split(', ')[4])) : 0;
-  mat ? transArr.push(parseFloat(mat[1].split(', ')[5])) : 0;
+  if (mat) {
+    transArr.push(parseFloat(mat[1].split(', ')[4]));
+    transArr.push(parseFloat(mat[1].split(', ')[5]));
+  }
 
   // NOT TRANSLATED
   if (!transArr || transArr.length < 1) return { x: 0, y: 0 };
